@@ -80,7 +80,7 @@ module Delayed
       end
 
       def column_exists?(column)
-        self.class.columns_hash.has_key?(column.to_s)
+        self.class.fields.keys.include?(column.to_s)
       end
     end
   end
